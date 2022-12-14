@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // alert prompt and confirm
+
+    alert("Calculate sum of two number :")
+    let num1 = prompt("Enter first number : ", 90); // we can give a default value to prompt , ex 90
+    num1 = Number.parseInt(num1);
+
+    let num2 = prompt("Enter second numer : ", 78);
+    num2 = Number.parseInt(num2);
+
+    let outPut = "Sum of ${num1} and ${num2} is : ";
+    document.write("Sum of ", num1, " And ", num2, " is ", num1 + num2);
+
+    alert(num1 + num2)
+    let con = confirm("What the answer is currect?")
+    if (con == true) {
+        alert("Thanks")
+    }
+</script>
+
+</html>
