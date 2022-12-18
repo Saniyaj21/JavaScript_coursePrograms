@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn" id="btn" onclick='alert("Dont click 💋")'>Click</button>
+
+    <button class="btn" id="btn2" onclick='changeColor()'>Click to changeColor</button>
+
+
+
+    <button class="btn" id="btn3" onmouseenter='alert("mouse hovered")'>Hover</button>
+
+    <script>
+        function changeColor() {
+            let btn = document.getElementById("btn2");
+
+            if (btn.style.color == "red") {
+
+                btn.style.color = "white";
+
+            }
+
+            else if (btn.style.color = "white") {
+                btn.style.color = "red";
+
+            };
+        }
+    </script>
+</body>
+
+</html>
