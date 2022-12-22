@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <style>
+        .main {
+            height: 100px;
+        }
+
+        .btn {
+
+            width: 100px;
+            height: 80px;
+            border-radius: 10px;
+            margin: 10px;
+            font-size: 18px;
+            color: white;
+        }
+
+        #btn1 {
+            position: fixed;
+            top: 10px;
+            background-color: red;
+        }
+
+        #btn2 {
+            position: fixed;
+            top: 10px;
+            left: 120px;
+            background-color: blue;
+        }
+
+        #btn3 {
+            position: fixed;
+            top: 10px;
+            left: 230px;
+            background-color: green;
+        }
+
+        #clear {
+            color: red;
+            /* background-color: black; */
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button class="btn" id="btn1" value="red">red</button>
+        <button class="btn" id="btn2" value="blue">blue</button>
+        <button class="btn" id="btn3" value="green">green</button>
+    </div>
+    <button id="clear">Reset</button>
+
+
+
+    <script>
+        let btns = document.querySelectorAll('.btn')
+        // console.log(btns)
+        let clickCounter = { 'red': 0, 'blue': 0, 'green': 0 }
+
+        btns.forEach(element => {
+            element.onclick = () => {
+                clickCounter[element.value] += 1
+                element.innerText = clickCounter[element.value]
+            }
+
+
+        });
+        function clearScore() {
+            clickCounter.red = 0
+            clickCounter.blue = 0
+            clickCounter.green = 0
+            btns.forEach(btn => {
+                btn.innerText = " "
+            })
+        }
+
+
+        let clear = document.getElementById('clear')
+        clear.onclick = () => clearScore()
+    </script>
+</body>
+
+</html>
